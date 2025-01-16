@@ -11,9 +11,6 @@ head(dataset)
 str(dataset)
 summary(dataset)
 
-# Drop the 'Unnamed: 0' column
-dataset <- dataset %>% select(-Unnamed..0)
-
 # Check for missing values
 colSums(is.na(dataset))
 
