@@ -1,16 +1,5 @@
 Version: 1.0
 
-RestoreWorkspace: Default
-SaveWorkspace: Default
-AlwaysSaveHistory: Default
-
-EnableCodeIndexing: Yes
-UseSpacesForTab: Yes
-NumSpacesForTab: 2
-Encoding: UTF-8
-
-RnwWeave: Sweave
-LaTeX: pdfLaTeX
 install.packages("tidyverse")
 install.packages("ggplot2")
 install.packages("tidyr")
@@ -22,8 +11,6 @@ dataset <- read.csv("dataset.csv")
 head(dataset)
 str(dataset)
 summary(dataset)
-# Drop the 'Unnamed: 0' column
-dataset <- dataset %>% select(-Unnamed..0)
 # Check for missing values
 colSums(is.na(dataset))
 # Drop rows with missing values (small proportion)
